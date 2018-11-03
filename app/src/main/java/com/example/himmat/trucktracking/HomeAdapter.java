@@ -34,7 +34,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        viewHolder.mBinding.rowHomeDetailImage
+//        viewHolder.mBinding.rowHomeDetailImage
     }
 
     @Override
