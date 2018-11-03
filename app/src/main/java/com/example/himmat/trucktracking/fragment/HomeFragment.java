@@ -66,7 +66,7 @@ public class HomeFragment extends BaseFragment implements OnApiResponseListner, 
 
         linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         mBinding.rvHome.setLayoutManager(linearLayoutManager);
-        homeAdapter = new HomeAdapter(getActivity(), this);
+        homeAdapter = new HomeAdapter(getActivity(),homeArrayList, this);
         mBinding.rvHome.setAdapter(homeAdapter);
     }
 

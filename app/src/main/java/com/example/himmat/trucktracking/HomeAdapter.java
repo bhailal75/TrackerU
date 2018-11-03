@@ -11,12 +11,17 @@ import android.view.ViewGroup;
 
 import com.example.himmat.trucktracking.databinding.RowHomeBinding;
 import com.example.himmat.trucktracking.fragment.HomeFragment;
+import com.example.himmat.trucktracking.model.HomeData;
+
+import java.util.ArrayList;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     private RowHomeBinding mBinding;
     private Context context;
-    public HomeAdapter(FragmentActivity activity, HomeFragment homeFragment) {
+    private ArrayList<HomeData> arrayList;
+    public HomeAdapter(FragmentActivity activity,ArrayList<HomeData> arrayList, HomeFragment homeFragment) {
         this.context = activity;
+        this.arrayList = arrayList;
     }
 
     @NonNull
@@ -29,12 +34,12 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-
+        viewHolder.mBinding.rowHomeDetailImage
     }
 
     @Override
     public int getItemCount() {
-        return 5;
+        return arrayList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
